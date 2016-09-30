@@ -68,7 +68,7 @@
             this.Controls.Add(this.btnInput);
             this.Controls.Add(this.input);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Decimal to PrimeBase convertor";
             this.ResumeLayout(false);
             this.PerformLayout();
 

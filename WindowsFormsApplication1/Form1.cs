@@ -18,6 +18,7 @@ namespace WindowsFormsApplication1
         public Form1()
         {
             InitializeComponent();
+            AcceptButton = this.btnInput;
         }
 
         private void btnInput_Click(object sender, EventArgs e)
@@ -55,9 +56,11 @@ namespace WindowsFormsApplication1
                     lResults.Add(0);
                     lResults.Add(0);
 
-                while (divider < highestPrime && subtotal > 1)
+                while (divider <= highestPrime && subtotal > 1)
                     {
-                        if (subtotal % divider == 0)
+                    int tempresult = (subtotal % divider);
+
+                       if (subtotal % divider == 0)
                         { //valid divider found. add it to output and restart the loop
                             subtotal = subtotal / divider;
 
@@ -68,7 +71,7 @@ namespace WindowsFormsApplication1
                             lResults.RemoveAt(lResults.Count - 1);
                             lResults.Add(tempResult);    
                             
-                    }
+                        }
                         else
                         { //input not dividable by this divider, chose the next divider
                             divider = getNextPrime(divider);
@@ -86,6 +89,8 @@ namespace WindowsFormsApplication1
                     output.Text = formatResult(lResults);
                     //output.Text = Convert.ToString(tempOutput);
                 }
+
+                input.Clear();
             }
         }
 
@@ -97,7 +102,7 @@ namespace WindowsFormsApplication1
             for (int i = 0; i < aPrimes.Length; i++)
             {
                 int thisNum = aPrimes[i];
-                if ((thisNum > maxVal) && thisNum < matchValue)
+                if ((thisNum > maxVal) && thisNum <= matchValue)
                 {
                     maxVal = thisNum;
                     index = i;
@@ -140,5 +145,7 @@ namespace WindowsFormsApplication1
 
             return result;
         }
+
+        
     }
 }
