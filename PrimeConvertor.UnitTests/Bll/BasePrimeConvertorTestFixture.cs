@@ -21,6 +21,7 @@ namespace PrimeConvertor.UnitTests.Bll
         public void TestGetDividers(int input, int[] expected)
         {
             // arrange
+
             // act
             var result = _convertor.GetDividers(input);
 
@@ -64,7 +65,8 @@ namespace PrimeConvertor.UnitTests.Bll
         }
 
         [Test]
-        public void test() {
+        public void Test()
+        {
             // arrange
 
             // act

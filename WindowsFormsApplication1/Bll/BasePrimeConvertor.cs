@@ -48,7 +48,7 @@ namespace WindowsFormsApplication1.Bll
         /// </summary>
         /// <param name="matchValue"></param>
         /// <returns></returns>
-        internal int GetNextPrime(int currentPrime)
+        internal virtual int GetNextPrime(int currentPrime)
         {
             var currentIndex = Array.IndexOf(_primes, currentPrime);
             if (currentIndex + 1 == _primes.Length)
@@ -61,7 +61,7 @@ namespace WindowsFormsApplication1.Bll
         /// </summary>
         /// <param name="matchValue"></param>
         /// <returns></returns>
-        internal int GetHighestPrimeUnderOrEqualToValue(int matchValue)
+        internal virtual int GetHighestPrimeUnderOrEqualToValue(int matchValue)
         {
             var maxVal = 0;
 
